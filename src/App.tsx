@@ -1,15 +1,19 @@
 import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
+
+import Home from "./Home";
+import About from "./About";
+import Contact from "./Contact";
 
 const App = () => {
-  const [fontSize, setFontSize] = useState(12);
-
   return (
-    <>
-      <div style={{ fontSize }}>This is my test React project.</div>
-      <button type="button" onClick={() => setFontSize(fontSize + 5)}>
-        Increase font size!
-      </button>
-    </>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </div>
   );
 };
 
