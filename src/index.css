@@ -1,9 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   font-family: sans-serif;
-}
-.flex {
-  display: flex;
-  justify-content: space-around;
 }
 .header-board {
   border: 1px solid;
